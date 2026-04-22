@@ -19,7 +19,8 @@
     <h1>Vaanguard</h1>
         <nav>
             <h2>Main Navigation</h2>
-                <ul><li><a href="#about">About</a></li>
+            <ul>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li> 
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -93,18 +94,26 @@
 
             <h2>Contact Us</h2>
             <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required>
 
-                Full Name
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required>
 
-                Email Address
+                <label for="company">Company Name</label>
+                <input type="text" name="company" id="company" required>
 
-                Company Name
+                <label for="industry">Industry</label>
+                <input type="industry" name="industry" id="industry" required>
 
-                Industry
+                <label for="sup">How can we help you?</label>
+                <textarea type="sup" name="sup" id="sup" required></textarea>
 
-                How can we help you?
+                <button type="submit">Submit</button> 
+            </form>
 
-                Submit
+                
 
     </main>
 
