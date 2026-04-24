@@ -86,7 +86,7 @@ table {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+header h1::before {
     content: "";
 
     left:-.5rem;
@@ -114,7 +114,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.5s ease-in-out;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
