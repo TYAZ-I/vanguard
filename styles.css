@@ -1,6 +1,7 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Tiana Yazzie */
 
 /* IMPORTED FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Coiny&family=Stack+Sans+Notch:wght@200..700&display=swap');
 /* IMPORT "INTER" FROM GOOGLE FONTS"
 
 /* CSS RESET */
@@ -74,7 +75,7 @@ table {
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+#innovation-whoa-bro {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
