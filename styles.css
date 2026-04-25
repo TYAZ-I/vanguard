@@ -152,6 +152,24 @@ header h1::before {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
+@media (min-width: 800px) {
+    #results.bro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .results-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .results-table, #see-bro {
+        width: 50%;
+    }
+}
 
     #results {
         grid-template-columns: 1fr 1fr;
