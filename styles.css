@@ -185,5 +185,33 @@ header h1::before {
         width: 50%;
     }
 
-
 /* MEDIA QUERIES (LARGE) */
+@media (min-width: 1024px) {
+    #just-trust-me-bro {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 1fr;
+        gap: 20px;
+    }
+
+    #just-trust-me-bro h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        color: var(--black);
+        text-transform: capitalize;
+    }
+
+    #just-trust-me-bro h3 {
+        background-color: var(--blue);
+        color: var(--white);
+        padding: 20px;
+        margin-bottom: 0;
+    }
+
+    #just-trust-me-bro p {
+        background-color: var(--blue);
+        color: var(--white);
+        padding: 0 20px 20px 20px;
+    }
+}
