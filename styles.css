@@ -102,25 +102,75 @@ nav h2 {
     display: none;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
+/* hamburger section*/
+    nav label {
+        display: block;
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        z-index: 10;
+    }
 
-nav ul li a {
-    color: var(--blue);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s;
-}
+    label span {
+        background-color: white;
+        display: block;
+        height: .25rem;
+        width: 2rem;
+        position: absolute;
+        transition: background-color .3s ease-out;
+        width: 2rem;
+    }
 
-nav ul li a:hover {
-    color: var(--white);
-}
+    label span:before, label span:after {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    label span:before {
+        top: .75rem;
+    }
+
+    label span:after {
+        top: -.75rem;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    #hambergerrrr:checked ~ ul {
+        display: flex;
+    }
+
+    #hambergerrrr:checked ~ label span {
+        background: transparent;
+    }
+
+    #hambergerrrr:checked ~ label span:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    #hambergerrrr:checked ~ label span:after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    #results.bro {
+        background-color: var(--blue);
+        color: var(--white);
+        padding: 60px 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 html {
@@ -140,6 +190,20 @@ html {
 nav label {
     display: none;
     cursor: pointer;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -214,13 +278,26 @@ header h1::before {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px) {
-    #results.bro {
-        background-color: var(--blue);
-        color: var(--white);
-        padding: 60px 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+    nav label {
+        display: none;
+    }
+
+    nav ul {
+        display: flex; 
+        flex-direction: row;
+        gap: 2rem;
+        position: static;
+        width: auto;
+        background: transparent;
+    }
+    
+    nav ul li a {
+        color: var(--blue);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
     }
 
     #results.bro h2 {
@@ -265,6 +342,8 @@ header h1::before {
 
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
+
+/* just-trust-me-bro section */
     #just-trust-me-bro {
         display: grid;
         grid-template-columns: 3fr 3fr 3fr 1fr;
