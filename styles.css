@@ -332,9 +332,11 @@ header h1::before {
 /* just-trust-me-bro section */
 #just-trust-me-bro {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     padding: 60px 5%;
+    gap: 20px;
     background-color: var(--white);
+    align-items: start;
 }
 
 #just-trust-me-bro h2 {
@@ -346,13 +348,6 @@ header h1::before {
     color: var(--black);
     text-transform: capitalize;
 }
-
-#just-trust-me-bro {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        align-items: start;
-    }
 
 #just-trust-me-bro .container {
     background-color: var(--blue);
@@ -609,13 +604,16 @@ footer p {
     #results-bro {
         grid-template-columns: 1fr 1fr;
     }
+
     .results-bro-container {
         flex-direction: row;
         justify-content: space-between;
     }
+
     .results-bro-table {
         width: 50%;
     }
+
     .bar-chart {
         width: 50%;
     }
@@ -623,5 +621,22 @@ footer p {
 
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
+    .results-bro-container {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+    }
 
+    .results-bro-table {
+        width: calc(50% - 20px); 
+    }
+
+    .bar-chart {
+        width: calc(50% - 20px);
+    }
 }
