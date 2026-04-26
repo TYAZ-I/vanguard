@@ -70,6 +70,58 @@ body {
     background-color: var(--white);
     line-height: 1.6;
 }
+
+header {
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 2px solid var(--blue);
+}
+
+header h1 {
+    color: var(--blue);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    text-transform: none;
+}
+
+header h1::before {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+}
+
+nav h2 { 
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--white);
+}
+
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 html {
     min-width: 400px;
@@ -79,6 +131,15 @@ html {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+#hambergerrrr {
+    display: none;
+}
+
+nav label {
+    display: none;
+    cursor: pointer;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -154,14 +215,12 @@ header h1::before {
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px) {
     #results.bro {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
         background-color: var(--blue);
+        color: var(--white);
+        padding: 60px 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     #results.bro h2 {
@@ -188,15 +247,17 @@ header h1::before {
     }
 }
 
-    #results {
+    #results-bro {
         grid-template-columns: 1fr 1fr;
     }
     .results-container {
         flex-direction: row;
         justify-content: space-between;
     }
-    .results-table {
-        width: 50%;
+    .results-bro table {
+        margin-top: 20px;
+        background-color: var(--black);
+        width: 100%;
     }
     .bar-chart {
         width: 50%;
@@ -208,6 +269,7 @@ header h1::before {
         display: grid;
         grid-template-columns: 3fr 3fr 3fr 1fr;
         gap: 20px;
+        align-items: start;
     }
 
 #just-trust-me-bro h2 {
@@ -220,19 +282,80 @@ header h1::before {
         text-transform: capitalize;
     }
 
-    #just-trust-me-bro h3 {
+    #just-trust-me-bro .container {
         background-color: var(--blue);
         color: var(--white);
-        padding: 20px;
-        margin-bottom: 0;
-        border-radius: 5px 5px 0 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #just-trust-me-bro h3 {
+        padding: 25px 20px 10px 20px;
+        font-size: 1.2rem;
     }
 
     #just-trust-me-bro p {
-        background-color: var(--blue);
-        color: var(--white);
-        padding: 0 20px 20px 20px;
-        border-radius: 0 0 5px 5px; 
-        height: 100%; 
+       padding: 0 20px 25px 20px;
+        line-height: 1.4; 
     }
+}
+
+#digits-bro {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 3rem 1rem;
+}
+
+#digits-bro h2, #digits-bro p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+
+#digits-bro form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#digits-bro label {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#digits-bro input, #digits-bro textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: var(--white);
+}
+
+#digits-bro textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#digits-bro button[type="submit"] {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#digits-bro button[type="submit"]:hover {
+    background-color: #0056b3;
 }
