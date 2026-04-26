@@ -230,28 +230,6 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-#dude-bro-expertise h2 {
-        grid-column: 1 / -1;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 2rem;
-        color: var(--black);
-        text-transform: capitalize;
-    }
-
-#just-trust-me-bro h2 {
-        grid-column: 1 / -1;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 2rem;
-        color: var(--black);
-        text-transform: capitalize;
-    }
-
-    
-
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 #innovation-whoa-bro {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
@@ -317,6 +295,53 @@ header h1::before {
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 
 }
+
+/* dude-bro-expertise section */
+
+#dude-bro-expertise {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 60px 5%;
+    background-color: var(--white);
+}
+
+#dude-bro-expertise h2 {
+        grid-column: 1 / -1;
+        text-align: left;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--black);
+        text-transform: capitalize;
+    }
+
+    #dude-bro-expertise p {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* just-trust-me-bro section */
+#just-trust-me-bro {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 60px 5%;
+    background-color: var(--white);
+}
+
+#just-trust-me-bro h2 {
+        grid-column: 1 / -1;
+        text-align: left;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: var(--black);
+        text-transform: capitalize;
+    }
+
+    
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -431,12 +456,12 @@ header h1::before {
 @media (min-width: 1024px) {
 
 /* just-trust-me-bro section */
-#just-trust-me-bro {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    align-items: start;
-}
+    #just-trust-me-bro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
 
     #just-trust-me-bro .container {
         background-color: var(--blue);
