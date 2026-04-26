@@ -60,7 +60,7 @@ table {
     --white: #EAEAEA;
     --black: #000000;
     --charcoal: #333333;
-    --font: "Inter", sans-serif;
+    --font: 'Inter', sans-serif;
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
@@ -361,12 +361,12 @@ header h1::before {
 @media (min-width: 1024px) {
 
 /* just-trust-me-bro section */
-    #just-trust-me-bro {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        align-items: start;
-    }
+#just-trust-me-bro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+}
 
 #just-trust-me-bro h2 {
         grid-column: 1 / -1;
