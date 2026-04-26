@@ -306,18 +306,18 @@ header h1::before {
 }
 
 #dude-bro-expertise h2 {
-        grid-column: 1 / -1;
-        text-align: left;
-        width: 100%;
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 2rem;
-        margin-bottom: 1.5rem;
-        color: var(--black);
-        text-transform: capitalize;
-    }
+    grid-column: 1 / -1;
+    text-align: left;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
 
-    #dude-bro-expertise p {
+#dude-bro-expertise p {
     text-align: left;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -332,16 +332,74 @@ header h1::before {
 }
 
 #just-trust-me-bro h2 {
-        grid-column: 1 / -1;
-        text-align: left;
-        font-size: 2rem;
-        font-weight: 800;
-        margin-bottom: 2rem;
-        color: var(--black);
-        text-transform: capitalize;
-    }
+    grid-column: 1 / -1;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
 
-    
+ 
+/* results-bro section  */
+#results-bro {
+    grid-template-columns: 1fr 1fr;
+}
+
+#results-bro h2 {
+     grid-column: 1 / -1;
+    text-align: left;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+#results-bro h3 {
+     grid-column: 1 / -1;
+    text-align: left;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+#results-bro p {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.results-container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.results-bro table {
+    margin-top: 20px;
+    background-color: var(--black);
+    width: 100%;
+}
+
+#results-bro th, #results-bro td {
+    background-color: var(--black);
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--charcoal);
+}
+
+.bar-chart {
+    width: 50%;
+}
+
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -392,151 +450,22 @@ header h1::before {
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px) {
 
-    nav label {
-        display: none;
-    }
-
-    nav ul {
-        display: flex; 
-        flex-direction: row;
-        gap: 2rem;
-        position: static;
-        width: auto;
-        background: transparent;
-    }
-    
-    nav ul li a {
-        color: var(--blue);
-        text-decoration: none;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 1rem;
-    }
-
-   #results-bro > section:first-of-type {
-        width: 50%;
-        margin-top: 0;
-    }
-
-    #see-bro {
-        width: 50%;
-        margin-top: 0;
-    }
-
-    #bar-chart {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-}
-
-    #results-bro {
+     #results-bro {
         grid-template-columns: 1fr 1fr;
     }
-    .results-container {
+    .results-bro-container {
         flex-direction: row;
         justify-content: space-between;
     }
-    .results-bro table {
-        margin-top: 20px;
-        background-color: var(--black);
-        width: 100%;
+    .results-bro-table {
+        width: 50%;
     }
-
-    #results-bro th, #results-bro td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid var(--charcoal);
-}
-
     .bar-chart {
         width: 50%;
     }
 
+}
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
 
-/* just-trust-me-bro section */
-    #just-trust-me-bro {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        align-items: start;
-    }
-
-    #just-trust-me-bro .container {
-        background-color: var(--blue);
-        color: var(--white);
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 0;
-        border-radius: 8px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #just-trust-me-bro h3 {
-        padding: 25px 20px 10px 20px;
-        font-size: 1.2rem;
-    }
-
-    #just-trust-me-bro p {
-       padding: 0 20px 25px 20px;
-        line-height: 1.4; 
-    }
-}
-
-#digits-bro {
-    background-color: var(--black);
-    color: var(--white);
-    padding: 3rem 1rem;
-}
-
-#digits-bro p {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 1.5rem auto;
-}
-
-#digits-bro form {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-#digits-bro label {
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-#digits-bro input, #digits-bro textarea {
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: var(--white);
-}
-
-#digits-bro textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-#digits-bro button[type="submit"] {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 1.5rem;
-    transition: background-color 0.3s ease;
-}
-
-#digits-bro button[type="submit"]:hover {
-    background-color: #0056b3;
 }
