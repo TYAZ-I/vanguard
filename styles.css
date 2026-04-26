@@ -112,6 +112,11 @@ nav h2 {
         z-index: 10;
     }
 
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
     label span {
         background-color: white;
         display: block;
@@ -138,11 +143,6 @@ nav h2 {
 
     label span:after {
         top: -.75rem;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
     }
 
     #hambergerrrr:checked ~ ul {
