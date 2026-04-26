@@ -109,73 +109,91 @@ nav h2 {
 }
 
 /* hamburger section*/
-    nav label {
-        display: block;
-        cursor: pointer;
-        width: 32px;
-        height: 32px;
-        position: relative;
-        z-index: 10;
-    }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-    }
+nav label {
+    display: block;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    z-index: 10;
+}
 
-    label span {
-        background-color: white;
-        display: block;
-        height: .25rem;
-        width: 2rem;
-        position: absolute;
-        transition: background-color .3s ease-out;
-        width: 2rem;
-    }
+nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--blue);
+    padding: 2rem;
+    z-index: 5;
+}
 
-    label span:before, label span:after {
-        background: white;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all .2s ease-out;
-        width: 100%;
-    }
+nav ul li {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
 
-    label span:before {
-        top: .75rem;
-    }
+nav ul li a {
+    color: var(--white);
+    font-size: 1.5rem;
+}
 
-    label span:after {
-        top: -.75rem;
-    }
+label span {
+    background-color: white;
+    display: block;
+    height: .25rem;
+    width: 2rem;
+    position: absolute;
+    transition: background-color .3s ease-out;
+    width: 2rem;
+}
 
-    #hambergerrrr:checked ~ ul {
-        display: flex;
-    }
+label span:before, label span:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
 
-    #hambergerrrr:checked ~ label span {
-        background: transparent;
-    }
+label span:before {
+    top: .75rem;
+}
 
-    #hambergerrrr:checked ~ label span:before {
-        transform: rotate(-45deg);
-        top: 0;
-    }
+label span:after {
+    top: -.75rem;
+}
 
-    #hambergerrrr:checked ~ label span:after {
-        transform: rotate(45deg);
-        top: 0;
-    }
-    #results.bro {
-        background-color: var(--blue);
-        color: var(--white);
-        padding: 60px 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+#hambergerrrr:checked ~ ul {
+    display: flex;
+}
+
+#hambergerrrr:checked ~ label span {
+    background: transparent;
+}
+
+#hambergerrrr:checked ~ label span:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#hambergerrrr:checked ~ label span:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+#results-bro {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 60px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
@@ -192,12 +210,6 @@ html {
 #hambergerrrr {
     display: none;
 }
-
-/* nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-} */
 
 nav ul li a {
     color: var(--blue);
@@ -298,11 +310,11 @@ header h1::before {
         font-size: 1rem;
     }
 
-    #results.bro h2 {
+    #results-bro h2 {
         color: var(--white);
     }
 
-    #results.bro p {
+    #results-bro p {
         color: var(--white);
     }
 
@@ -334,6 +346,13 @@ header h1::before {
         background-color: var(--black);
         width: 100%;
     }
+
+    #results-bro th, #results-bro td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--charcoal);
+}
+
     .bar-chart {
         width: 50%;
     }
@@ -344,7 +363,7 @@ header h1::before {
 /* just-trust-me-bro section */
     #just-trust-me-bro {
         display: grid;
-        grid-template-columns: 3fr 3fr 3fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         align-items: start;
     }
