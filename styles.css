@@ -1,7 +1,7 @@
 /* CSS BY Tiana Yazzie */
 
 /* IMPORTED FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Coiny&family=Stack+Sans+Notch:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /* IMPORT "INTER" FROM GOOGLE FONTS"
 
 /* CSS RESET */
@@ -154,20 +154,37 @@ header h1::before {
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px) {
     #results.bro {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-
-    .results-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+        gap: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        background-color: var(--blue);
     }
 
-    .results-table, #see-bro {
+    #results.bro h2 {
+        color: var(--white);
+    }
+
+    #results.bro p {
+        color: var(--white);
+    }
+
+   #results-bro > section:first-of-type {
         width: 50%;
+        margin-top: 0;
+    }
+
+    #see-bro {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    #bar-chart {
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -193,7 +210,8 @@ header h1::before {
         gap: 20px;
     }
 
-    #just-trust-me-bro h2 {
+#just-trust-me-bro h2 {
+        grid-column: 1 / -1;
         text-align: center;
         font-size: 2rem;
         font-weight: 600;
@@ -207,11 +225,14 @@ header h1::before {
         color: var(--white);
         padding: 20px;
         margin-bottom: 0;
+        border-radius: 5px 5px 0 0;
     }
 
     #just-trust-me-bro p {
         background-color: var(--blue);
         color: var(--white);
         padding: 0 20px 20px 20px;
+        border-radius: 0 0 5px 5px; 
+        height: 100%; 
     }
 }
