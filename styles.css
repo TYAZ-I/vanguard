@@ -90,6 +90,7 @@ header h1 {
     color: var(--blue);
     font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
+    font-weight: 800;
     display: flex;
     align-items: center;
     text-transform: none;
@@ -196,6 +197,16 @@ label span:after {
 }
 
 
+#dude-bro-expertise {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 60px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 html {
     min-width: 400px;
@@ -217,6 +228,28 @@ nav ul li a {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+#dude-bro-expertise h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: var(--black);
+        text-transform: capitalize;
+    }
+
+#just-trust-me-bro h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: var(--black);
+        text-transform: capitalize;
+    }
+
+    
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 #innovation-whoa-bro {
@@ -310,14 +343,6 @@ header h1::before {
         font-size: 1rem;
     }
 
-    #results-bro h2 {
-        color: var(--white);
-    }
-
-    #results-bro p {
-        color: var(--white);
-    }
-
    #results-bro > section:first-of-type {
         width: 50%;
         margin-top: 0;
@@ -368,16 +393,6 @@ header h1::before {
     align-items: start;
 }
 
-#just-trust-me-bro h2 {
-        grid-column: 1 / -1;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 600;
-        margin-bottom: 2rem;
-        color: var(--black);
-        text-transform: capitalize;
-    }
-
     #just-trust-me-bro .container {
         background-color: var(--blue);
         color: var(--white);
@@ -408,7 +423,7 @@ header h1::before {
     padding: 3rem 1rem;
 }
 
-#digits-bro h2, #digits-bro p {
+#digits-bro p {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 1.5rem auto;
