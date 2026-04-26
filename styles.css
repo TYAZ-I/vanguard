@@ -416,10 +416,10 @@ header h1::before {
     line-height: 1.8;
 }
 
-.results-container {
+/* .results-container {
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 
 .results-bro table {
     margin-top: 20px;
@@ -427,11 +427,30 @@ header h1::before {
     width: 100%;
 }
 
-#results-bro th, #results-bro td {
+#results-bro table thead tr th {
     background-color: var(--black);
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid var(--charcoal);
+    color: var(--white);
+    padding: 20px;
+    border: 1px solid var(--charcoal);
+}
+
+#results-bro table tbody tr td {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 15px;
+    border: 1px solid var(--charcoal);
+    text-align: center;
+}
+
+#results-bro table tbody tr:nth-child(even) td {
+    background-color: var(--charcoal);
+}
+
+#results-bro h3 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
 .bar-chart {
