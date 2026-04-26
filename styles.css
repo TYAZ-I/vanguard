@@ -609,18 +609,18 @@ footer p {
     #results-bro {
         grid-template-columns: 1fr 1fr;
     }
-    .results-bro container {
+    .results-bro-container {
         flex-direction: row;
         justify-content: space-between;
     }
-    .results-bro table {
+    .results-bro-table {
         width: 50%;
     }
     .bar-chart {
         width: 50%;
     }
-
 }
+
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
 
