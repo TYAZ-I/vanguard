@@ -138,8 +138,14 @@ nav ul li {
 }
 
 nav ul li a {
+    display:block;
     color: var(--white);
     font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    text-decoration:none;
+    padding:1rem;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 label span {
@@ -311,7 +317,7 @@ header h1::before {
     width: 100%;
     font-size: 2rem;
     font-weight: 800;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     margin-bottom: 1.5rem;
     color: var(--black);
     text-transform: capitalize;
@@ -341,6 +347,39 @@ header h1::before {
     text-transform: capitalize;
 }
 
+#just-trust-me-bro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
+
+#just-trust-me-bro .container {
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px;
+}
+
+#just-trust-me-bro h3 {
+    padding: 25px 20px 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#just-trust-me-bro p {
+    padding: 0 20px 25px 20px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
  
 /* results-bro section  */
 #results-bro {
@@ -468,6 +507,11 @@ header h1::before {
     margin: 0 auto 1.5rem auto;
 }
 
+.digits-bro-container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #digits-bro form {
     max-width: 800px;
     margin: 0 auto;
@@ -483,7 +527,7 @@ header h1::before {
 
 #digits-bro input, #digits-bro textarea {
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--white);
     border-radius: 4px;
     background: var(--white);
 }
@@ -507,8 +551,10 @@ header h1::before {
 }
 
 #digits-bro button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: var(--red);
+    transform: scale(1.05);
 }
+
 
 footer {
     background-color: var(--black);
@@ -521,14 +567,34 @@ footer p {
 /* MEDIA QUERIES (MEDIUM) */ 
 @media (min-width: 800px) {
 
-     #results-bro {
+    nav label {
+        display: none;
+    }
+
+    nav ul {
+        display: flex; 
+        flex-direction: row;
+        gap: 2rem;
+        position: static;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+
+    nav ul li a {
+        color: var(--blue); 
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    #results-bro {
         grid-template-columns: 1fr 1fr;
     }
-    .results-bro-container {
+    .results-bro container {
         flex-direction: row;
         justify-content: space-between;
     }
-    .results-bro-table {
+    .results-bro table {
         width: 50%;
     }
     .bar-chart {
