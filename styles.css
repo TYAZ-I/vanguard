@@ -651,5 +651,42 @@ footer p {
         width: calc(50% - 20px);
     }
 
-    
+    #digits-bro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 0px 20px;
+    }
+
+    #digits-bro h2, 
+    #digits-bro p {
+        grid-column: 1 / span 2;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #digits-bro form {
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .full-width {
+        grid-column: 1;
+    }
+
+    #digits-bro button[type="submit"] {
+        grid-column: 2;
+        align-self: end;
+        /* height: 150px; */
+        margin: 0;
+    }
 }
