@@ -106,6 +106,7 @@ header h1::before {
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 }
 
+
 nav h2 { 
     display: none;
 }
@@ -453,7 +454,6 @@ header h1::before {
     width: 50%;
 }
 
-
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -487,6 +487,7 @@ header h1::before {
     font-weight: bold;
     color: var(--white);
 }
+
 @keyframes stepUp {
     0% {
         height: 0;
@@ -495,6 +496,7 @@ header h1::before {
         height: var(--height);
     }
 }
+
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
@@ -727,14 +729,14 @@ footer p {
     }
 
 #digits-bro form {
-        display: grid;
-        grid-template-areas: 
-            "name email"
-            "company industry"
-            "message submit";
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
+    display: grid;
+    grid-template-areas: 
+        "name email"
+        "company industry"
+        "message submit";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
     .form-group-name { grid-area: name; }
     .form-group-email { grid-area: email; }
