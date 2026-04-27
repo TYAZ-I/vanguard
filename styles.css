@@ -258,7 +258,7 @@ html {
     -webkit-backdrop-filter: blur(5px); 
     padding: 3rem 2rem;
     border-radius: 12px;
-    max-width: 800px;
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
@@ -276,7 +276,7 @@ html {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     line-height: 1.6;
-    max-width: 650px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -360,9 +360,8 @@ header h1::before {
 #just-trust-me-bro .container {
     background-color: var(--blue);
     color: var(--white);
-    /* width: 100%;
-    max-width: none;
-    margin: 0; */
+    width: 100%;
+    margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
     box-sizing: border-box;
@@ -464,7 +463,7 @@ header h1::before {
     gap: 1rem;
     height: 300px;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     padding: 1rem;
     position: relative;
 }
@@ -509,17 +508,17 @@ header h1::before {
     padding: 60px 0;
 }
 
-/* #digits-bro .container {
-    max-width: none;
+#digits-bro .container {
+    width: 95%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
-} */
+}
 
 #digits-bro form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -529,14 +528,13 @@ header h1::before {
     font-weight: 800;
     color: var(--white);
     text-transform: capitalize;
-    max-width: 800px;
-    margin: 0 auto 1rem auto;
+    max-width: 100%;
+    margin: 1rem;
 }
 
 #digits-bro p {
     text-align: left;
-    max-width: 800px;
-    margin: 0 auto 1.5rem auto;
+    max-width: 100%;
 }
 
 #digits-bro label {
@@ -637,7 +635,6 @@ footer p {
         /* flex-direction: row; */
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 40px;
-        grid-template-columns: 1fr 1fr;
         /* justify-content: space-between; */
         /* align-items: end; */
     }
@@ -705,18 +702,21 @@ footer p {
     
     .results-bro-container {
         display: grid;
-        /* flex-direction: row; */
         grid-template-columns: 1fr 1fr;
-        /* justify-content: center;
-        align-items: flex-start;
-        max-width: 1200px;
-        margin: 0 auto; */
         gap: 60px;
         width: 100%;
+        align-items: end;
     }
 
     .results-bro-table {
         width: 100%; 
+        border-collapse: collapse;
+    }
+
+    .results-bro-table th, 
+    .results-bro-table td {
+        padding: 1rem;
+        text-align: center;
     }
 
     .bar-chart {
@@ -746,10 +746,12 @@ footer p {
             "name email"
             "company industry"
             "message submit";
-        gap: 20px;
+        gap: 30px;
     }
 
-
+    #digits-bro input, #digits-bro textarea {
+    width: 100%;
+    }
 
     /* #digits-bro button[type="submit"] {
         grid-area: submit;
