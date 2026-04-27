@@ -260,6 +260,7 @@ html {
     border-radius: 12px;
     max-width: 800px;
     width: 90%;
+    margin: 0 auto;
 }
 
 #innovation-whoa-bro h2 {
@@ -359,16 +360,16 @@ header h1::before {
 #just-trust-me-bro .container {
     background-color: var(--blue);
     color: var(--white);
-    width: 100%;
+    /* width: 100%;
     max-width: none;
-    margin: 0;
-    padding: 1rem 1rem;
+    margin: 0; */
+    padding: 2rem;
     border-radius: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
+    /* justify-content: flex-start;
+    height: 100%; */
 }
 
 #just-trust-me-bro h3 {
@@ -508,11 +509,11 @@ header h1::before {
     padding: 60px 0;
 }
 
-#digits-bro .container {
+/* #digits-bro .container {
     max-width: none;
     margin: 0 auto;
     padding: 0 20px;
-}
+} */
 
 #digits-bro form {
     display: flex;
@@ -565,7 +566,6 @@ header h1::before {
 
 #digits-bro button[type="submit"] {
     grid-area: submit;
-    align-self: end;
     background-color: var(--blue);
     color: var(--white);
     padding: 1rem;
@@ -574,7 +574,6 @@ header h1::before {
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
-    height: 150px;
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
@@ -634,8 +633,13 @@ footer p {
     }
 
     .results-bro-container {
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr 1fr;
+        /* justify-content: space-between; */
+        /* align-items: end; */
     }
 
     .results-bro-table {
@@ -655,15 +659,15 @@ footer p {
         grid-column: 1 / -1;
     }
 
-    #just-trust-me-bro.container {
+    /* #just-trust-me-bro.container {
         width: auto;
         height: 100%;
-    }
+    } */
 
-      #digits-bro {
-        margin: 0 auto;
-        padding: 40px 20px;
-        text-align: left;
+    #digits-bro {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
     }
 
     #digits-bro form {
@@ -698,53 +702,56 @@ footer p {
 
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
+    
     .results-bro-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-columns: 1fr 1fr;
+        /* justify-content: center;
         align-items: flex-start;
-        width: 100%;
         max-width: 1200px;
-        margin: 0 auto;
-        gap: 40px;
+        margin: 0 auto; */
+        gap: 60px;
+        width: 100%;
     }
 
     .results-bro-table {
-        width: calc(50% - 20px); 
+        width: 100%; 
     }
 
     .bar-chart {
-        width: calc(50% - 20px);
+        width: 100%;
     }
 
-#digits-bro {
+    #digits-bro {
         padding: 80px 0;
         background-color: var(--black);
     }
 
-    #digits-bro .container {
+    /* #digits-bro .container {
         max-width: 100%;
         margin: 0 auto;
         text-align: left;
-    }
-
-#digits-bro form {
-    display: grid;
-    grid-template-areas: 
-        "name email"
-        "company industry"
-        "message submit";
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
+    } */
     .form-group-name { grid-area: name; }
     .form-group-email { grid-area: email; }
     .form-group-company { grid-area: company; }
     .form-group-industry { grid-area: industry; }
     .message-area { grid-area: message; }
 
-    #digits-bro button[type="submit"] {
+    #digits-bro form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "name email"
+            "company industry"
+            "message submit";
+        gap: 20px;
+    }
+
+
+
+    /* #digits-bro button[type="submit"] {
         grid-area: submit;
         align-self: end;
         width: 100%;
@@ -757,5 +764,5 @@ footer p {
         font-weight: bold;
         cursor: pointer;
         margin-top: 0;
-    }
+    } */
 }
