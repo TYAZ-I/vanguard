@@ -205,16 +205,6 @@ label span:after {
     top: 0;
 }
 
-#results-bro {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 60px 5%;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
-}
-
-
 #dude-bro-expertise {
     background-color: var(--white);
     color: var(--black);
@@ -345,6 +335,12 @@ header h1::before {
     flex-direction: column;
     background-color: var(--white);
     align-items: stretch;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#just-trust-me-bro .container:hover {
+    transform: translateY(-10px);
 }
 
 #just-trust-me-bro h2 {
@@ -367,8 +363,6 @@ header h1::before {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start;
-    height: 100%; */
 }
 
 #just-trust-me-bro h3 {
@@ -384,23 +378,16 @@ header h1::before {
 }
  
 /* results-bro section  */
+
 #results-bro {
-    grid-template-columns: 1fr 1fr;
-}
-
-#results-bro h2 {
-    grid-column: 1 / -1;
-    text-align: left;
-    width: 100%;
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-    margin-bottom: 1.5rem;
+    background-color: var(--blue);
     color: var(--white);
-    text-transform: capitalize;
+    padding: 60px 5%;
+    grid-template-columns: 1fr 1fr;
+    
 }
 
-#results-bro h3 {
+#results-bro h2, #results-bro h3 {
     grid-column: 1 / -1;
     text-align: left;
     width: 100%;
@@ -632,16 +619,9 @@ footer p {
 
     .results-bro-container {
         display: grid;
-        /* flex-direction: row; */
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 40px;
-        /* justify-content: space-between; */
-        /* align-items: end; */
     }
-
-    /* .results-bro-table {
-        width: 50%;
-    } */
 
     .bar-chart {
         width: 50%;
@@ -747,19 +727,5 @@ footer p {
     #digits-bro input, #digits-bro textarea {
     width: 100%;
     }
-
-    /* #digits-bro button[type="submit"] {
-        grid-area: submit;
-        align-self: end;
-        width: 100%;
-        height: 60px;
-        background-color: var(--blue);
-        color: var(--white);
-        border: none;
-        border-radius: 8px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 0;
-    } */
+    
 }
